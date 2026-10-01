@@ -1,9 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Registrasi - Validasi</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+        }
+        .card {
+            width: min(100%, 440px);
+            padding: 28px;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+        }
+        h1 { margin: 0 0 8px; font-size: 1.6rem; }
+        .intro { margin: 0 0 22px; color: #6b7280; }
+        .field { margin-bottom: 16px; }
+        label { display: block; margin-bottom: 6px; font-weight: 600; }
+        input:not([type="checkbox"]) {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            font: inherit;
+        }
+        input:focus { outline: 2px solid #93c5fd; border-color: #2563eb; }
+        input[aria-invalid="true"] { border-color: #dc2626; }
+        .error { min-height: 18px; margin: 5px 0 0; color: #b91c1c; font-size: .875rem; }
+        .checkbox-row { display: flex; align-items: flex-start; gap: 9px; }
+        .checkbox-row label { margin: 0; font-weight: 400; }
+        button {
+            width: 100%; padding: 12px; border: 0; border-radius: 7px;
+            background: #2563eb; color: #fff; font: inherit; font-weight: 700; cursor: pointer;
+        }
+        button:hover { background: #1d4ed8; }
+        #result { margin: 16px 0 0; font-weight: 600; }
+        #result.success { color: #15803d; }
+    </style>
 </head>
 <body>
     <h1>Validasi Form</h1>
